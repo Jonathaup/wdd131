@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>WDD131 - Dynamic Web Fundamental</title>
+    <title>WDD 131 Dynamic Web Fundamentals - Jonathan Uribe</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Jonathan — course project showcasing dynamic web fundamentals, HTML structure, responsive design, and JavaScript concepts.">
+    <meta name="author" content="Jonathan Uribe">
+    <link href="styles/base.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>WDD131</h1>
-        <p class="subtitle">Dynamic Web Fundamental</p>
+    <header>    
+        <span id="course-title">WDD 131 Dynamic Web Fundamentals</span>
+        <nav class="navbar">
+            
+                <a href="https://www.linkedin.com/in/jonathan-uribe-dev/">LinkedIn</a>
+                <a href="https://byupw.instructure.com/">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/1?lang=eng&id=p7#p7">Favorite Scripture</a>
+                <a href="project/index.html">Final Project</a>
+           
+        </nav>
+    </header>
+    <main>
         
-        <div class="weeks-grid">
-            <a href="week01/" class="week-card">
-                <div class="week-number">01</div>
-                <div class="week-title">Week 1</div>
-            </a>
+        <h1>Jonathan Uribe</h1>
+        <section class="card">
+         <h2>About Me</h2>
+            <p>Hello! My name is Jonathan Uribe, and I am excited to be part of the WDD 131 Dynamic Web Fundamentals course. I have a passion for web development and look forward to enhancing my skills in creating dynamic and responsive web applications.</p>
+            <img src="images/profile_picture.webp" alt="Jonathan Uribe">
             
-            <!-- <a href="week02/" class="week-card">
-                <div class="week-number">02</div>
-                <div class="week-title">Week 2</div>
-            </a>
+            <h3>Venezuela</h3>
+            <img class="flag" src="images/flag_of_venezuela.webp" alt="Flag of Venezuela">
+            <p>Venezuela is famous for the natural phenomenon called "Catatumbo Lightning," an electrical storm that can produce up to 280 lightning flashes per hour and occurs almost every night over Lake Maracaibo, making it one of the places with the most electrical discharges in the world.</p>
             
-            <a href="week03/" class="week-card">
-                <div class="week-number">03</div>
-                <div class="week-title">Week 3</div>
-            </a>
-            
-            <a href="week04/" class="week-card">
-                <div class="week-number">04</div>
-                <div class="week-title">Week 4</div>
-            </a> -->
-            
-        </div>
-
-        <footer>
-            <p>&copy; 2025 | Jonathan Uribe | Venezuela</p>
-        </footer>
-    </div>
+        </section>
+        <section class="card">
+         <h2>Web Dev Resources</h2>
+            <ul>
+                <li>Understand the fundamentals of dynamic web development.</li>
+                <li>Learn to create responsive web designs.</li>
+                <li>Gain proficiency in HTML, CSS, and JavaScript.</li>
+                <li>Build a portfolio of web projects.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            © <span id="currentyear"></span> | Jonathan Uribe | Venezuela
+        </p>
+        
+        <p id="lastModified"></p>
+        
+    </footer>
 </body>
 </html>
