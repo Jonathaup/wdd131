@@ -1,0 +1,33 @@
+@media screen and (min-width: 500px) {
+    
+  main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  }
+
+  header{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #menu{
+    display: none;
+  }
+
+  .navbar-temple{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .navbar-temple a {
+    display: flex;
+    font-size: x-large;
+
+  }
+
+  h1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
