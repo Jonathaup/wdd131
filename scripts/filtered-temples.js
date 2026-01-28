@@ -93,7 +93,7 @@ function createTempleCard(temple) {
 
 	const figcaption = document.createElement('figcaption');
 	figcaption.innerHTML = `
-    <h3>${temple.templeName}</h3>
+    <h2>${temple.templeName}</h2>
     <p><strong>Location:</strong> ${temple.location}</p>
     <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
     <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
