@@ -1,0 +1,124 @@
+body {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    color: white;
+    background-color: #4E0110;
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "⨉";
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-temple {
+    gap: 1rem;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-temple a {
+    display: none;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    padding: 0.3rem;
+}
+
+.navbar-temple a.active {
+    background-color: #4E0110;
+}
+
+.navbar-temple a:hover {
+    border: 2px solid white;
+}
+
+.open a {
+    display: block;
+    padding-top: 1rem;
+}
+
+#title-temple {
+    font-size: xx-large;
+}
+
+h1 {
+    text-align: center;
+    grid-column: 1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#temple-cards {
+    display: contents;
+}
+
+figure {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    margin: 1rem;
+}
+
+figure:hover {
+    box-shadow: 0 0 50px #333;
+}
+
+main img {
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+figcaption {
+    padding: 1rem;
+    text-align: left;
+}
+
+figcaption h3 {
+    margin: 0.5rem 0;
+    color: #4E0110;
+}
+
+figcaption p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
