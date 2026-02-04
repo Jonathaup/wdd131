@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product review submission confirmation">
+    <meta name="author" content="Jonathan Uribe">
+    <title>Review Submitted - Thank You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Thank You!</h1>
+        <p>Your review has been submitted</p>
+    </header>
+
+    <main class="confirmation-page">
+        <div class="confirmation-card">
+            <div class="success-icon">✓</div>
+            <h2>Review Submitted Successfully</h2>
+
+            <div class="review-summary" id="reviewSummary">
+                <!-- JavaScript will populate this section -->
+            </div>
+
+            <div class="review-counter">
+                <p>Total reviews completed: <strong id="reviewCount">0</strong></p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="form.html" class="btn-primary">Submit Another Review</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jonathan Uribe | WDD 131: Dynamic Web Fundamentals | BYU-Idaho</p>
+    </footer>
+</body>
+
+</html>
