@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2D5016;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #2D5016;
+    border-bottom: 2px solid #4A7C25;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #4A7C25;
+}
+
+p {
+    line-height: 1.6;
+    color: #333333;
+}
+
+.color-box, .color-box-white {
+    padding: 30px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+.color-box p{
+        color: white;
+
+}
+
+.wireframe {
+    border: 2px solid #333;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.mobile {
+    max-width: 400px;
+}
+
+.desktop {
+    width: 100%;
+}
+
+.wire-box {
+    border: 2px dashed #4A7C25;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.wire-row {
+    display: flex;
+    gap: 10px;
+}
+
+.wire-row .wire-box {
+    flex: 1;
+}
+
+footer {
+    background-color: #2D5016;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .wire-row {
+        flex-direction: column;
+    }
+}
