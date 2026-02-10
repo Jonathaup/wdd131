@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Basic Soccer – Learn the fundamentals of soccer: rules, player positions, and required equipment. The perfect starting point for beginners." />
+    <title>Basic Soccer – Learn the Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+</head>
+
+<body class="home-page">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Basic Soccer – Home">
+                <span class="logo-icon" aria-hidden="true">⚽</span>
+                <span class="logo-text">Basic Soccer</span>
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="positions.html">Positions &amp; Equipment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Welcome banner">
+        <div class="hero-inner">
+            <div class="hero-image-wrapper">
+                <img class="soccer-ball-img" src="https://pngimg.com/uploads/football/football_PNG28462.png"
+                    alt="Soccer ball" width="200" height="200" loading="lazy" />
+            </div>
+            <h1>Welcome to Basic Soccer</h1>
+            <p>Your beginner's guide to the world's most popular sport. Learn the rules, discover positions, and find
+                out what gear you need to start playing today.</p>
+            <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="rules.html" class="btn btn-hero">Explore the Rules</a>
+                <a href="positions.html" class="btn btn-outline">Positions &amp; Gear</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <div class="container">
+
+            <!-- INTRO SECTION -->
+            <section class="section" aria-labelledby="intro-heading">
+                <div class="intro-section">
+                    <div class="intro-text">
+                        <h2 id="intro-heading">What Is Soccer?</h2>
+                        <p>Soccer (known as football in most of the world) is the most widely played and watched sport
+                            on the planet. Two teams of 11 players each compete to score goals by getting a ball into
+                            the opposing team's net, using any part of the body except the arms and hands (except for
+                            the goalkeeper).</p>
+                        <p>A standard match lasts 90 minutes, split into two halves of 45 minutes. The team that scores
+                            the most goals wins. If the game ends in a draw in a knockout competition, extra time and
+                            penalty kicks may be used to determine a winner.</p>
+                        <p>Whether you want to play, watch, or simply understand the game better, this site will walk
+                            you through everything you need to know to get started.</p>
+                        <a href="rules.html" class="btn">Learn the Rules →</a>
+                    </div>
+                    <div>
+                        <!-- World stats highlight -->
+                        <div class="highlight-box">
+                            <h3>⚽ A Truly Global Sport</h3>
+                            <p>Soccer is played in virtually every country on Earth. From neighborhood parks to packed
+                                stadiums, the sport connects billions of people regardless of language, culture, or
+                                background.</p>
+                        </div>
+                        <div class="highlight-box" style="margin-top:1rem;">
+                            <h3>🌍 Why Learn Soccer?</h3>
+                            <p>Understanding soccer means you can enjoy watching matches with friends, participate in
+                                casual games, and appreciate the incredible skill and teamwork that professional players
+                                demonstrate.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- STATS BAR -->
+            <section class="section" aria-labelledby="stats-heading">
+                <h2 id="stats-heading" class="section-title">Soccer By the Numbers</h2>
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="265" data-suffix="M">0M</span>
+                        <span class="stat-label">Players worldwide</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="211" data-suffix="">0</span>
+                        <span class="stat-label">FIFA member nations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5" data-suffix="B+">0B+</span>
+                        <span class="stat-label">World Cup viewers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="90" data-suffix=" min">0 min</span>
+                        <span class="stat-label">Match duration</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- THREE PILLARS CARDS -->
+            <section class="section" aria-labelledby="learn-heading">
+                <h2 id="learn-heading" class="section-title">What You Will Learn</h2>
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon" aria-hidden="true">📋</div>
+                            <h3>Basic Rules</h3>
+                            <p>Understand match duration, how goals are scored, what offside means, and the difference
+                                between yellow and red cards. Our interactive rule cards make learning fun.</p>
+                            <a href="rules.html" class="btn mt-2">See the Rules</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon" aria-hidden="true">🏃</div>
+                            <h3>Player Positions</h3>
+                            <p>Discover the four main positions — goalkeeper, defender, midfielder, and forward — and
+                                find out which one suits your style of play best as a beginner.</p>
+                            <a href="positions.html" class="btn mt-2">Explore Positions</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-body">
+                            <div class="card-icon" aria-hidden="true">🛒</div>
+                            <h3>Equipment Needed</h3>
+                            <p>Find out exactly what gear you need to start playing: from the right boots to shin guards
+                                and the correct ball size. Get on the field with confidence.</p>
+                            <a href="positions.html#equipment" class="btn mt-2">View Equipment</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- OBJECTIVE SECTION -->
+            <section class="section" aria-labelledby="objective-heading">
+                <h2 id="objective-heading" class="section-title">The Objective of Soccer</h2>
+                <div style="max-width:750px; margin:0 auto; text-align:center;">
+                    <p>The goal of soccer is simple: score more goals than your opponent during the 90-minute match. A
+                        goal is counted when the entire ball crosses the goal line between the two goalposts and under
+                        the crossbar.</p>
+                    <p>While the objective is straightforward, the beauty of the game lies in the strategy, teamwork,
+                        and individual brilliance required to create and take goal-scoring opportunities — all while
+                        defending against the opposing team doing the same.</p>
+                    <p>The sport also has deep cultural importance across the globe. It promotes teamwork, physical
+                        fitness, discipline, and international understanding. With over 265 million players worldwide,
+                        soccer truly is the world's game.</p>
+                    <a href="contact.html" class="btn mt-2">Have Questions? Contact Us</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules</a>
+                <a href="positions.html">Positions &amp; Equipment</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© Basic Soccer <span id="currentyear"></span> | Jonathan Uribe | Venezuela</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

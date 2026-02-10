@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Learn the basic rules of soccer: match duration, number of players, fouls, free kicks, offside, and more. Interactive and beginner-friendly." />
+    <meta name="author" content="Jonathan Uribe">
+
+    <title>Basic Rules – Basic Soccer</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+</head>
+
+<body class="rules-page">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Basic Soccer – Home">
+                <span class="logo-icon" aria-hidden="true">⚽</span>
+                <span class="logo-text">Basic Soccer</span>
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="positions.html">Positions &amp; Equipment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="hero" aria-label="Rules page banner" style="padding: 3rem 1rem;">
+        <div class="hero-inner">
+            <h1>📋 Basic Rules of Soccer</h1>
+            <p>Understanding the rules makes every match more enjoyable. Click on any rule below to learn more, and test
+                your knowledge with our quick quiz!</p>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main id="main-content">
+        <div class="container">
+
+            <!-- RULES SECTION -->
+            <section class="section" aria-labelledby="rules-heading">
+                <div class="rules-intro">
+                    <h2 id="rules-heading" class="section-title">The Rules Explained</h2>
+                    <p>Soccer has a clear set of rules known as the "Laws of the Game," maintained by FIFA. The rules
+                        below are the most important ones for a beginner to understand. Use the filter buttons to browse
+                        by category.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="rules-filter" role="group" aria-label="Filter rules by category">
+                    <button class="filter-btn active" data-category="all" type="button">All Rules</button>
+                    <button class="filter-btn" data-category="basics" type="button">Basics</button>
+                    <button class="filter-btn" data-category="fouls" type="button">Fouls &amp; Cards</button>
+                    <button class="filter-btn" data-category="restarts" type="button">Restarts</button>
+                </div>
+
+                <!-- Rules Container (populated by JS) -->
+                <div id="rules-container" role="region" aria-live="polite" aria-label="Rules list">
+                    <!-- Rules injected by JavaScript -->
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- COMMON FOULS SECTION -->
+            <section class="section" aria-labelledby="fouls-heading">
+                <h2 id="fouls-heading" class="section-title">Most Common Fouls</h2>
+                <p style="text-align:center; max-width:650px; margin: 0 auto 1.5rem;">These are the fouls you will most
+                    frequently see called in a soccer match. Referees use their judgment and the context of the game
+                    when deciding how to penalize each infraction.</p>
+
+                <div style="max-width:700px; margin:0 auto;">
+                    <ul class="fouls-list" aria-label="Common fouls in soccer">
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">🦵</span>
+                            <span><strong>Tripping:</strong> Using the leg or body to trip an opponent who does not have
+                                the ball.</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">🤜</span>
+                            <span><strong>Charging:</strong> Charging into an opponent in a reckless or dangerous
+                                way.</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">✋</span>
+                            <span><strong>Handball:</strong> Deliberately using the hand or arm to control the ball
+                                (except for the goalkeeper inside the penalty area).</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">👊</span>
+                            <span><strong>Striking or attempting to strike:</strong> Punching, kicking, or attempting to
+                                hit an opponent.</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">🫳</span>
+                            <span><strong>Holding:</strong> Using the hand or arm to hold back, pull, or restrain an
+                                opponent.</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">🏃</span>
+                            <span><strong>Pushing:</strong> Pushing an opponent with the hand, arm, or body when not
+                                challenging for the ball.</span>
+                        </li>
+                        <li>
+                            <span class="foul-icon" aria-hidden="true">🪓</span>
+                            <span><strong>Tackle from behind:</strong> Sliding into an opponent from behind in a way
+                                that endangers the player's safety.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- QUIZ SECTION -->
+            <section class="section" aria-labelledby="quiz-heading">
+                <h2 id="quiz-heading" class="section-title">Test Your Knowledge</h2>
+                <div class="quiz-section" role="region" aria-label="Rules quiz">
+                    <p style="text-align:center; margin-bottom:1.5rem;">Answer the questions below to see how well
+                        you've learned the rules of soccer!</p>
+                    <div id="quiz-body">
+                        <!-- Quiz populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="section text-center">
+                <h2>Ready to Learn More?</h2>
+                <p>Now that you know the rules, discover the different player positions and what equipment you need to
+                    start playing.</p>
+                <a href="positions.html" class="btn" style="margin-top:0.5rem;">Positions &amp; Equipment →</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules</a>
+                <a href="positions.html">Positions &amp; Equipment</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© Basic Soccer <span id="currentyear"></span> | Jonathan Uribe | Venezuela</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

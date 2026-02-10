@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Learn about the four main soccer positions — goalkeeper, defender, midfielder, and forward — plus the equipment you need to start playing." />
+    <meta name="author" content="Jonathan Uribe">
+
+    <title>Positions &amp; Equipment – Basic Soccer</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+</head>
+
+<body class="positions-page">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Basic Soccer – Home">
+                <span class="logo-icon" aria-hidden="true">⚽</span>
+                <span class="logo-text">Basic Soccer</span>
+            </a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li><a href="positions.html">Positions &amp; Equipment</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="hero" aria-label="Positions page banner" style="padding: 3rem 1rem;">
+        <div class="hero-inner">
+            <h1>🏃 Positions &amp; Equipment</h1>
+            <p>Discover the four main player positions and learn which one best fits your style — then find out exactly
+                what gear you need to get on the field.</p>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main id="main-content">
+        <div class="container">
+
+            <!-- INTERACTIVE FIELD DIAGRAM -->
+            <section class="section" aria-labelledby="diagram-heading">
+                <h2 id="diagram-heading" class="section-title">Interactive Field Diagram</h2>
+                <p style="text-align:center; max-width:600px; margin:0 auto 1.5rem;">Click on a player position on the
+                    field to learn about their role and key responsibilities.</p>
+
+                <div class="field-diagram" id="field-diagram" role="region"
+                    aria-label="Interactive soccer field diagram">
+                    <div class="field-inner">
+
+                        <!-- Goalkeeper row -->
+                        <div class="field-row">
+                            <button class="position-dot active" data-position="goalkeeper"
+                                aria-label="Goalkeeper position" type="button">
+                                <span class="dot" aria-hidden="true">🧤</span>
+                                <span class="pos-label">Goalkeeper</span>
+                            </button>
+                        </div>
+
+                        <!-- Defenders row -->
+                        <div class="field-row">
+                            <button class="position-dot" data-position="defender" aria-label="Defender position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">🛡️</span>
+                                <span class="pos-label">Defender</span>
+                            </button>
+                            <button class="position-dot" data-position="defender" aria-label="Defender position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">🛡️</span>
+                                <span class="pos-label">Defender</span>
+                            </button>
+                            <button class="position-dot" data-position="defender" aria-label="Defender position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">🛡️</span>
+                                <span class="pos-label">Defender</span>
+                            </button>
+                            <button class="position-dot" data-position="defender" aria-label="Defender position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">🛡️</span>
+                                <span class="pos-label">Defender</span>
+                            </button>
+                            
+                        </div>
+
+                        <!-- Midfielders row -->
+                        <div class="field-row">
+                            <button class="position-dot" data-position="midfielder" aria-label="Midfielder position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚙️</span>
+                                <span class="pos-label">Midfielder</span>
+                            </button>
+                            <button class="position-dot" data-position="midfielder" aria-label="Midfielder position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚙️</span>
+                                <span class="pos-label">Midfielder</span>
+                            </button>
+                            <button class="position-dot" data-position="midfielder" aria-label="Midfielder position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚙️</span>
+                                <span class="pos-label">Midfielder</span>
+                            </button>
+                        </div>
+
+                        <!-- Forwards row -->
+                        <div class="field-row">
+                            <button class="position-dot" data-position="forward" aria-label="Forward position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚡</span>
+                                <span class="pos-label">Forward</span>
+                            </button>
+                            <button class="position-dot" data-position="forward" aria-label="Forward position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚡</span>
+                                <span class="pos-label">Forward</span>
+                            </button>
+                            <button class="position-dot" data-position="forward" aria-label="Forward position"
+                                type="button">
+                                <span class="dot" aria-hidden="true">⚡</span>
+                                <span class="pos-label">Forward</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Position Info Card (updated by JS) -->
+                <div class="position-info-card" id="position-info" role="region" aria-live="polite"
+                    aria-label="Position details">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- POSITIONS DETAIL GRID -->
+            <section class="section" aria-labelledby="positions-heading">
+                <h2 id="positions-heading" class="section-title">The Four Main Positions</h2>
+                <p style="text-align:center; max-width:650px; margin:0 auto 2rem;">Every player on the field has a
+                    defined role. Here are the four main positions you will encounter in soccer, along with what makes
+                    each one unique.</p>
+
+                <!-- Populated by JavaScript -->
+                <div class="positions-grid" id="positions-grid">
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- WHICH POSITION IS RIGHT FOR ME? -->
+            <section class="section" aria-labelledby="which-position-heading">
+                <h2 id="which-position-heading" class="section-title">Which Position Should I Play?</h2>
+                <div style="max-width:700px; margin:0 auto;">
+                    <div class="cards-grid" style="grid-template-columns: 1fr 1fr;">
+                        <div class="highlight-box">
+                            <h3>🧤 Good with your hands?</h3>
+                            <p>If you have great reflexes and enjoy being the last line of defense, try goalkeeper. It
+                                is one of the most demanding but rewarding positions on the field.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h3>🛡️ Physically strong?</h3>
+                            <p>If you like stopping the opponent and protecting your team's goal, defender might be your
+                                position. Strong tackles and good positioning are key.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h3>⚙️ High stamina?</h3>
+                            <p>Midfielders cover the most ground in a match. If you have great endurance and good
+                                passing ability, this is the role for you.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <h3>⚡ Fast and competitive?</h3>
+                            <p>If you love the thrill of scoring and have speed and determination, forward is the
+                                position where you can make the biggest impact on the scoreboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- EQUIPMENT SECTION -->
+            <section class="section" id="equipment" aria-labelledby="equipment-heading">
+                <h2 id="equipment-heading" class="section-title">Equipment You Will Need</h2>
+                <p style="text-align:center; max-width:650px; margin:0 auto 1rem;">To start playing soccer, you do not
+                    need a lot of expensive gear. Here is a list of the basic equipment every player should have.</p>
+
+                <!-- Populated by JavaScript -->
+                <div class="equipment-grid" id="equipment-grid">
+                </div>
+            </section>
+
+            <hr class="divider" />
+
+            <!-- LIKE BUTTON SECTION -->
+            <section class="like-section" aria-labelledby="like-heading">
+                <h2 id="like-heading">Do You Like Soccer?</h2>
+                <p>Show your support and let the world know you are a soccer fan!</p>
+                <button class="like-btn" id="like-btn" type="button" aria-pressed="false">
+                    <span class="like-icon" aria-hidden="true">⭐</span>
+                    I like soccer!
+                </button>
+                <span class="like-count" id="like-count" aria-live="polite">248 people like soccer</span>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="rules.html">Rules</a>
+                <a href="positions.html">Positions &amp; Equipment</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© Basic Soccer <span id="currentyear"></span> | Jonathan Uribe | Venezuela</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
