@@ -1,15 +1,6 @@
-
 "use strict";
 
-/* =============================================
-   DATA - OBJECTS & ARRAYS
-   ============================================= */
-
-const siteData = {
-    name: "Basic Soccer",
-    author: "Jonathan Uribe",
-    year: 2026,
-};
+/* DATA */
 
 const positions = [
     {
@@ -18,8 +9,7 @@ const positions = [
         emoji: "🧤",
         fieldEmoji: "🥅",
         shortName: "GK",
-        description:
-            "The goalkeeper is the last line of defense. They are the only player allowed to use their hands within the penalty area. A great goalkeeper must have quick reflexes, strong decision-making, and excellent communication with defenders.",
+        description: "The goalkeeper is the last line of defense. They are the only player allowed to use their hands within the penalty area. A great goalkeeper must have quick reflexes, strong decision-making, and excellent communication with defenders.",
         skills: ["Reflexes", "Communication", "Positioning"],
     },
     {
@@ -28,8 +18,7 @@ const positions = [
         emoji: "🛡️",
         fieldEmoji: "👟",
         shortName: "DEF",
-        description:
-            "Defenders protect the goal and stop opposing attackers. They need strong tackling, heading ability, and positioning skills. Central defenders organize the backline while fullbacks provide width and attacking support.",
+        description: "Defenders protect the goal and stop opposing attackers. They need strong tackling, heading ability, and positioning skills. Central defenders organize the backline while fullbacks provide width and attacking support.",
         skills: ["Tackling", "Heading", "Positioning"],
     },
     {
@@ -38,8 +27,7 @@ const positions = [
         emoji: "⚙️",
         fieldEmoji: "⚽",
         shortName: "MID",
-        description:
-            "Midfielders are the engine of the team. They link defense and attack, controlling the pace and direction of play. They need high stamina, passing accuracy, and tactical intelligence to dominate the center of the pitch.",
+        description: "Midfielders are the engine of the team. They link defense and attack, controlling the pace and direction of play. They need high stamina, passing accuracy, and tactical intelligence to dominate the center of the pitch.",
         skills: ["Passing", "Stamina", "Vision"],
     },
     {
@@ -48,8 +36,7 @@ const positions = [
         emoji: "⚡",
         fieldEmoji: "🎯",
         shortName: "FWD",
-        description:
-            "Forwards are responsible for scoring goals and creating chances. They need finishing ability, speed, and smart movement to beat defenders. A good forward can change the game with a single moment of brilliance.",
+        description: "Forwards are responsible for scoring goals and creating chances. They need finishing ability, speed, and smart movement to beat defenders. A good forward can change the game with a single moment of brilliance.",
         skills: ["Finishing", "Speed", "Movement"],
     },
 ];
@@ -114,42 +101,12 @@ const rules = [
 ];
 
 const equipmentItems = [
-    {
-        emoji: "⚽",
-        name: "Soccer Ball",
-        description:
-            "The official ball is spherical with a circumference of 68–70 cm (size 5 for adults). Beginners can start with a size 4 or 5 ball for practice.",
-    },
-    {
-        emoji: "👕",
-        name: "Jersey & Shorts",
-        description:
-            "Each team wears matching jerseys to distinguish players. The uniform includes a shirt, shorts, and socks in team colors.",
-    },
-    {
-        emoji: "🦺",
-        name: "Shin Guards",
-        description:
-            "Mandatory protective gear worn under socks. Shin guards protect the lower legs from tackles and accidental kicks during play.",
-    },
-    {
-        emoji: "👟",
-        name: "Cleats / Boots",
-        description:
-            "Specialized footwear with studs on the sole for traction on grass or turf. Proper boots improve control, speed, and injury prevention.",
-    },
-    {
-        emoji: "🥅",
-        name: "Goalpost",
-        description:
-            "The full-size goal is 7.32 m wide and 2.44 m tall. Portable mini-goals are great for beginners practicing at parks.",
-    },
-    {
-        emoji: "🏟️",
-        name: "Playing Field",
-        description:
-            "An official pitch is 100–110 m long and 64–75 m wide. Beginners can play on smaller fields to develop their skills gradually.",
-    },
+    { emoji: "⚽", name: "Soccer Ball", description: "The official ball is spherical with a circumference of 68–70 cm (size 5 for adults). Beginners can start with a size 4 or 5 ball for practice." },
+    { emoji: "👕", name: "Jersey & Shorts", description: "Each team wears matching jerseys to distinguish players. The uniform includes a shirt, shorts, and socks in team colors." },
+    { emoji: "🦺", name: "Shin Guards", description: "Mandatory protective gear worn under socks. Shin guards protect the lower legs from tackles and accidental kicks during play." },
+    { emoji: "👟", name: "Cleats / Boots", description: "Specialized footwear with studs on the sole for traction on grass or turf. Proper boots improve control, speed, and injury prevention." },
+    { emoji: "🥅", name: "Goalpost", description: "The full-size goal is 7.32 m wide and 2.44 m tall. Portable mini-goals are great for beginners practicing at parks." },
+    { emoji: "🏟️", name: "Playing Field", description: "An official pitch is 100–110 m long and 64–75 m wide. Beginners can play on smaller fields to develop their skills gradually." },
 ];
 
 const quizQuestions = [
@@ -157,96 +114,52 @@ const quizQuestions = [
         question: "How long is each half of a standard soccer match?",
         options: ["30 minutes", "40 minutes", "45 minutes", "60 minutes"],
         correct: 2,
-        explanation:
-            "Each half lasts 45 minutes, making a total of 90 minutes of regular play.",
+        explanation: "Each half lasts 45 minutes, making a total of 90 minutes of regular play.",
     },
     {
         question: "How many players does each team have on the field?",
         options: ["9", "10", "11", "12"],
         correct: 2,
-        explanation:
-            "Each team fields 11 players, including one goalkeeper.",
+        explanation: "Each team fields 11 players, including one goalkeeper.",
     },
     {
         question: "Where is a penalty kick taken from?",
-        options: [
-            "The center circle",
-            "The goal area",
-            "The corner arc",
-            "The penalty spot (11m from goal)",
-        ],
+        options: ["The center circle", "The goal area", "The corner arc", "The penalty spot (11m from goal)"],
         correct: 3,
-        explanation:
-            "A penalty kick is taken from the penalty spot, 11 meters (12 yards) in front of the goal.",
+        explanation: "A penalty kick is taken from the penalty spot, 11 meters (12 yards) in front of the goal.",
     },
 ];
 
-/* =============================================
-   UTILITY FUNCTIONS
-   ============================================= */
-
-/**
- * Get current page filename
- * @returns {string}
- */
-function getCurrentPage() {
-    const path = window.location.pathname;
-    const parts = path.split("/");
+/* UTILITIES */
+const getCurrentPage = () => {
+    const parts = window.location.pathname.split("/");
     return parts[parts.length - 1] || "index.html";
-}
+};
 
-/**
- * Format a date to a readable string using template literal
- * @param {Date} date
- * @returns {string}
- */
-function formatDate(date) {
-    const options = { year: "numeric", month: "long", day: "numeric" };
-    return `${date.toLocaleDateString("en-US", options)}`;
-}
+const formatDate = (date) => date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 
-/**
- * Show a temporary notification message
- * @param {string} message
- * @param {string} type - 'success' | 'error'
- */
-function showNotification(message, type = "success") {
-    const existing = document.querySelector(".site-notification");
-    if (existing) existing.remove();
-
+const showNotification = (message, type = "success") => {
+    document.querySelector(".site-notification")?.remove();
+    
     const notification = document.createElement("div");
     notification.className = `site-notification site-notification--${type}`;
     notification.setAttribute("role", "alert");
-    notification.style.cssText = `
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1.5rem;
-    background: ${type === "success" ? "#2D5016" : "#dc3545"};
-    color: #fff;
-    padding: 0.9rem 1.4rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
-    z-index: 9999;
-    animation: slideInUp 0.3s ease;
-  `;
+    notification.style.cssText = `position:fixed;bottom:1.5rem;right:1.5rem;background:${type === "success" ? "#2D5016" : "#dc3545"};color:#fff;padding:.9rem 1.4rem;border-radius:8px;box-shadow:0 4px 16px rgba(0,0,0,.25);font-family:'Roboto',sans-serif;font-weight:700;font-size:.95rem;z-index:9999;animation:slideInUp .3s ease`;
     notification.textContent = message;
 
-    const style = document.createElement("style");
-    style.textContent = `@keyframes slideInUp { from { transform: translateY(20px); opacity:0; } to { transform: translateY(0); opacity:1; } }`;
-    document.head.appendChild(style);
+    if (!document.querySelector("style[data-notif]")) {
+        const style = document.createElement("style");
+        style.setAttribute("data-notif", "");
+        style.textContent = `@keyframes slideInUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}`;
+        document.head.appendChild(style);
+    }
 
     document.body.appendChild(notification);
     setTimeout(() => notification.remove(), 3500);
-}
+};
 
-/* =============================================
-   NAVIGATION
-   ============================================= */
-
-function initNavigation() {
+/* NAVIGATION */
+const initNavigation = () => {
     const toggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
     if (!toggle || !nav) return;
@@ -257,178 +170,132 @@ function initNavigation() {
         toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     });
 
-    // Close nav when a link is clicked on mobile
-    nav.querySelectorAll("a").forEach((link) => {
+    nav.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
             nav.classList.remove("open");
             toggle.setAttribute("aria-expanded", "false");
         });
-    });
-
-    // Mark active link
-    const current = getCurrentPage();
-    nav.querySelectorAll("a").forEach((link) => {
+        
         const href = link.getAttribute("href");
+        const current = getCurrentPage();
         if (href === current || (current === "index.html" && href === "./")) {
             link.classList.add("active");
             link.setAttribute("aria-current", "page");
         }
     });
-}
+};
 
-/* =============================================
-   HOME PAGE
-   ============================================= */
-
-function initHomePage() {
-    if (!document.querySelector(".home-page")) return;
-
-    // Animate stats on scroll using Intersection Observer
+/* HOME PAGE */
+const initHomePage = () => {
     const statItems = document.querySelectorAll(".stat-number");
     if (statItems.length === 0) return;
 
-    const animateStats = (entries, observer) => {
-        entries.forEach((entry) => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const el = entry.target;
                 const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || "";
                 let current = 0;
                 const increment = Math.ceil(target / 40);
+                
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        el.textContent = `${target}${el.dataset.suffix || ""}`;
+                        el.textContent = `${target}${suffix}`;
                         clearInterval(timer);
                     } else {
-                        el.textContent = `${current}${el.dataset.suffix || ""}`;
+                        el.textContent = `${current}${suffix}`;
                     }
                 }, 40);
+                
                 observer.unobserve(el);
             }
         });
-    };
+    }, { threshold: 0.5 });
 
-    const observer = new IntersectionObserver(animateStats, { threshold: 0.5 });
-    statItems.forEach((el) => observer.observe(el));
-}
+    statItems.forEach(el => observer.observe(el));
+};
 
-/* =============================================
-   RULES PAGE
-   ============================================= */
-
-function initRulesPage() {
+/* RULES PAGE */
+const initRulesPage = () => {
     const rulesContainer = document.querySelector("#rules-container");
     if (!rulesContainer) return;
 
-    // Render all rules using template literals
     renderRules("all");
 
-    // Filter buttons
-    const filterBtns = document.querySelectorAll(".filter-btn");
-    filterBtns.forEach((btn) => {
+    document.querySelectorAll(".filter-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-            filterBtns.forEach((b) => b.classList.remove("active"));
+            document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            const category = btn.dataset.category;
-            renderRules(category);
+            renderRules(btn.dataset.category);
         });
     });
 
-    // Init quiz
     initQuiz();
-}
+};
 
-/**
- * Render rule cards filtered by category
- * @param {string} category
- */
-function renderRules(category) {
+const renderRules = (category) => {
     const container = document.querySelector("#rules-container");
     if (!container) return;
 
-    const filtered =
-        category === "all"
-            ? rules
-            : rules.filter((r) => r.category === category);
+    const filtered = category === "all" ? rules : rules.filter(r => r.category === category);
 
     if (filtered.length === 0) {
         container.innerHTML = `<p class="no-messages">No rules found for this category.</p>`;
         return;
     }
 
-    container.innerHTML = filtered
-        .map(
-            (rule) => `
-    <article class="rule-card" id="rule-${rule.id}" data-category="${rule.category}">
-      <button class="rule-header" aria-expanded="false" aria-controls="rule-body-${rule.id}">
-        <span class="rule-header-left">
-          <span class="rule-icon" aria-hidden="true">${rule.icon}</span>
-          <span class="rule-title">${rule.title}</span>
-        </span>
-        <span class="rule-category-badge">${rule.category}</span>
-        <span class="rule-toggle-icon" aria-hidden="true">▼</span>
-      </button>
-      <div class="rule-body" id="rule-body-${rule.id}" role="region">
-        <p>${rule.body}</p>
-      </div>
-    </article>
-  `
-        )
-        .join("");
+    container.innerHTML = filtered.map(rule => `
+        <article class="rule-card" id="rule-${rule.id}" data-category="${rule.category}">
+            <button class="rule-header" aria-expanded="false" aria-controls="rule-body-${rule.id}">
+                <span class="rule-header-left">
+                    <span class="rule-icon" aria-hidden="true">${rule.icon}</span>
+                    <span class="rule-title">${rule.title}</span>
+                </span>
+                <span class="rule-category-badge">${rule.category}</span>
+                <span class="rule-toggle-icon" aria-hidden="true">▼</span>
+            </button>
+            <div class="rule-body" id="rule-body-${rule.id}" role="region">
+                <p>${rule.body}</p>
+            </div>
+        </article>
+    `).join("");
 
-    // Attach toggle events
-    container.querySelectorAll(".rule-header").forEach((btn) => {
-        btn.addEventListener("click", () => toggleRule(btn));
+    container.querySelectorAll(".rule-header").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const card = btn.closest(".rule-card");
+            const isOpen = card.classList.toggle("open");
+            btn.setAttribute("aria-expanded", String(isOpen));
+        });
     });
-}
+};
 
-/**
- * Toggle a rule card open/closed
- * @param {HTMLElement} btn
- */
-function toggleRule(btn) {
-    const card = btn.closest(".rule-card");
-    const isOpen = card.classList.toggle("open");
-    btn.setAttribute("aria-expanded", String(isOpen));
-}
-
-/* =============================================
-   QUIZ
-   ============================================= */
-
+/* QUIZ */
 let currentQuizIndex = 0;
 let quizScore = 0;
 
-function initQuiz() {
-    renderQuizQuestion();
-}
+const initQuiz = () => renderQuizQuestion();
 
-function renderQuizQuestion() {
+const renderQuizQuestion = () => {
     const container = document.querySelector("#quiz-body");
     if (!container) return;
 
-    // Conditional: check if quiz is over
     if (currentQuizIndex >= quizQuestions.length) {
         const percent = Math.round((quizScore / quizQuestions.length) * 100);
-        let message;
-
-        if (percent === 100) {
-            message = "🏆 Perfect score! You know your soccer rules!";
-        } else if (percent >= 67) {
-            message = "⚽ Great job! You have a solid understanding of the rules.";
-        } else {
-            message = "📚 Keep reading the rules above — you'll get there!";
-        }
+        const message = percent === 100 ? "🏆 Perfect score! You know your soccer rules!" 
+            : percent >= 67 ? "⚽ Great job! You have a solid understanding of the rules." 
+            : "📚 Keep reading the rules above — you'll get there!";
 
         container.innerHTML = `
-      <div style="text-align:center; padding: 1rem;">
-        <p style="font-size:2rem; margin-bottom:0.5rem;">🎉</p>
-        <h3 style="color: var(--dark-green); margin-bottom:0.5rem;">Quiz Complete!</h3>
-        <p>You scored <strong>${quizScore} out of ${quizQuestions.length}</strong></p>
-        <p>${message}</p>
-        <button class="btn mt-3" id="restart-quiz">Try Again</button>
-      </div>
-    `;
+            <div style="text-align:center;padding:1rem">
+                <p style="font-size:2rem;margin-bottom:.5rem">🎉</p>
+                <h3 style="color:var(--dark-green);margin-bottom:.5rem">Quiz Complete!</h3>
+                <p>You scored <strong>${quizScore} out of ${quizQuestions.length}</strong></p>
+                <p>${message}</p>
+                <button class="btn mt-3" id="restart-quiz">Try Again</button>
+            </div>
+        `;
 
         document.querySelector("#restart-quiz")?.addEventListener("click", () => {
             currentQuizIndex = 0;
@@ -439,169 +306,124 @@ function renderQuizQuestion() {
     }
 
     const q = quizQuestions[currentQuizIndex];
-    const optionsHTML = q.options
-        .map(
-            (opt, i) => `
-    <button class="quiz-option" data-index="${i}" type="button">
-      <span>${String.fromCharCode(65 + i)}.</span> ${opt}
-    </button>
-  `
-        )
-        .join("");
-
     container.innerHTML = `
-    <p class="quiz-question">Q${currentQuizIndex + 1}/${quizQuestions.length}: ${q.question}</p>
-    <div class="quiz-options">${optionsHTML}</div>
-    <div id="quiz-feedback" role="alert"></div>
-  `;
+        <p class="quiz-question">Q${currentQuizIndex + 1}/${quizQuestions.length}: ${q.question}</p>
+        <div class="quiz-options">
+            ${q.options.map((opt, i) => `
+                <button class="quiz-option" data-index="${i}" type="button">
+                    <span>${String.fromCharCode(65 + i)}.</span> ${opt}
+                </button>
+            `).join("")}
+        </div>
+        <div id="quiz-feedback" role="alert"></div>
+    `;
 
-    container.querySelectorAll(".quiz-option").forEach((btn) => {
-        btn.addEventListener("click", () => handleQuizAnswer(btn, q));
+    container.querySelectorAll(".quiz-option").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const selected = parseInt(btn.dataset.index, 10);
+            const feedback = document.querySelector("#quiz-feedback");
+            const allOptions = document.querySelectorAll(".quiz-option");
+
+            allOptions.forEach(b => {
+                b.disabled = true;
+                b.style.cursor = "default";
+            });
+
+            const isCorrect = selected === q.correct;
+
+            if (isCorrect) {
+                quizScore++;
+                btn.classList.add("correct");
+                feedback.className = "show correct";
+                feedback.textContent = `✅ Correct! ${q.explanation}`;
+            } else {
+                btn.classList.add("wrong");
+                allOptions[q.correct].classList.add("correct");
+                feedback.className = "show wrong";
+                feedback.textContent = `❌ Not quite. ${q.explanation}`;
+            }
+
+            setTimeout(() => {
+                currentQuizIndex++;
+                renderQuizQuestion();
+            }, 2200);
+        });
     });
-}
+};
 
-/**
- * Handle a quiz answer selection
- * @param {HTMLElement} btn
- * @param {Object} question
- */
-function handleQuizAnswer(btn, question) {
-    const selected = parseInt(btn.dataset.index, 10);
-    const feedback = document.querySelector("#quiz-feedback");
-    const allOptions = document.querySelectorAll(".quiz-option");
-
-    // Disable all options
-    allOptions.forEach((b) => {
-        b.disabled = true;
-        b.style.cursor = "default";
-    });
-
-    const isCorrect = selected === question.correct;
-
-    // Conditional branching
-    if (isCorrect) {
-        quizScore++;
-        btn.classList.add("correct");
-        feedback.className = "show correct";
-        feedback.textContent = `✅ Correct! ${question.explanation}`;
-    } else {
-        btn.classList.add("wrong");
-        allOptions[question.correct].classList.add("correct");
-        feedback.className = "show wrong";
-        feedback.textContent = `❌ Not quite. ${question.explanation}`;
-    }
-
-    // Auto-advance after delay
-    setTimeout(() => {
-        currentQuizIndex++;
-        renderQuizQuestion();
-    }, 2200);
-}
-
-/* =============================================
-   POSITIONS PAGE
-   ============================================= */
-
-function initPositionsPage() {
+/* POSITIONS PAGE */
+const initPositionsPage = () => {
     const fieldDiagram = document.querySelector("#field-diagram");
     const positionInfo = document.querySelector("#position-info");
     if (!fieldDiagram || !positionInfo) return;
 
-    // Render position dots & cards
     renderPositionCards();
-
-    // Default: show first position info
     showPositionInfo(positions[0].id);
 
-    fieldDiagram.querySelectorAll(".position-dot").forEach((dot) => {
+    fieldDiagram.querySelectorAll(".position-dot").forEach(dot => {
         dot.addEventListener("click", (e) => {
             const btn = e.target.closest(".position-dot");
             if (!btn) return;
-            const posId = btn.dataset.position;
-            showPositionInfo(posId);
-
-            fieldDiagram.querySelectorAll(".position-dot").forEach((d) =>
-                d.classList.remove("active")
-            );
+            
+            showPositionInfo(btn.dataset.position);
+            fieldDiagram.querySelectorAll(".position-dot").forEach(d => d.classList.remove("active"));
             btn.classList.add("active");
         });
     });
 
     renderEquipmentCards();
     initLikeButton();
-}
+};
 
-function renderPositionCards() {
+const renderPositionCards = () => {
     const grid = document.querySelector("#positions-grid");
     if (!grid) return;
 
-    grid.innerHTML = positions
-        .map(
-            (pos) => `
-    <article class="position-card">
-      <span class="position-emoji" aria-hidden="true">${pos.emoji}</span>
-      <div>
-        <h3>${pos.name}</h3>
-        <p>${pos.description}</p>
-        <p><strong>Key Skills:</strong> ${pos.skills.join(", ")}</p>
-      </div>
-    </article>
-  `
-        )
-        .join("");
-}
+    grid.innerHTML = positions.map(pos => `
+        <article class="position-card">
+            <span class="position-emoji" aria-hidden="true">${pos.emoji}</span>
+            <div>
+                <h3>${pos.name}</h3>
+                <p>${pos.description}</p>
+                <p><strong>Key Skills:</strong> ${pos.skills.join(", ")}</p>
+            </div>
+        </article>
+    `).join("");
+};
 
-/**
- * Display info for a specific position
- * @param {string} posId
- */
-function showPositionInfo(posId) {
-    const pos = positions.find((p) => p.id === posId);
-    if (!pos) return;
-
+const showPositionInfo = (posId) => {
+    const pos = positions.find(p => p.id === posId);
     const infoCard = document.querySelector("#position-info");
-    if (!infoCard) return;
+    if (!pos || !infoCard) return;
 
     infoCard.innerHTML = `
-    <h3>${pos.emoji} ${pos.name}</h3>
-    <p>${pos.description}</p>
-    <p><strong>Key Skills:</strong> ${pos.skills.join(" · ")}</p>
-  `;
-}
+        <h3>${pos.emoji} ${pos.name}</h3>
+        <p>${pos.description}</p>
+        <p><strong>Key Skills:</strong> ${pos.skills.join(" · ")}</p>
+    `;
+};
 
-function renderEquipmentCards() {
+const renderEquipmentCards = () => {
     const grid = document.querySelector("#equipment-grid");
     if (!grid) return;
 
-    grid.innerHTML = equipmentItems
-        .map(
-            (item) => `
-    <article class="equipment-card">
-      <div class="equipment-emoji" aria-hidden="true">${item.emoji}</div>
-      <h3>${item.name}</h3>
-      <p>${item.description}</p>
-    </article>
-  `
-        )
-        .join("");
-}
+    grid.innerHTML = equipmentItems.map(item => `
+        <article class="equipment-card">
+            <div class="equipment-emoji" aria-hidden="true">${item.emoji}</div>
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+        </article>
+    `).join("");
+};
 
-/* =============================================
-   LIKE BUTTON (localStorage)
-   ============================================= */
-
-function initLikeButton() {
+/* LIKE BUTTON */
+const initLikeButton = () => {
     const likeBtn = document.querySelector("#like-btn");
     const likeCountEl = document.querySelector("#like-count");
     if (!likeBtn || !likeCountEl) return;
 
-    // Get data from localStorage
-    let likeData = JSON.parse(localStorage.getItem("basicSoccer_likes")) || {
-        liked: false,
-        count: 248,
-    };
+    let likeData = JSON.parse(localStorage.getItem("basicSoccer_likes")) || { liked: false, count: 248 };
 
-    // Conditional branching
     if (likeData.liked) {
         likeBtn.classList.add("liked");
         likeBtn.innerHTML = `<span class="like-icon">⭐</span> You liked this!`;
@@ -610,36 +432,28 @@ function initLikeButton() {
     likeCountEl.textContent = `${likeData.count} people like soccer`;
 
     likeBtn.addEventListener("click", () => {
-        if (!likeData.liked) {
-            likeData.liked = true;
-            likeData.count++;
-            likeBtn.classList.add("liked");
-            likeBtn.innerHTML = `<span class="like-icon">⭐</span> You liked this!`;
-            showNotification("Thanks for the like! ⚽");
-        } else {
-            likeData.liked = false;
-            likeData.count--;
-            likeBtn.classList.remove("liked");
-            likeBtn.innerHTML = `<span class="like-icon">⭐</span> I like soccer!`;
-            showNotification("Like removed.", "error");
-        }
+        likeData.liked = !likeData.liked;
+        likeData.count += likeData.liked ? 1 : -1;
 
+        likeBtn.classList.toggle("liked", likeData.liked);
+        likeBtn.innerHTML = likeData.liked 
+            ? `<span class="like-icon">⭐</span> You liked this!`
+            : `<span class="like-icon">⭐</span> I like soccer!`;
+        
         likeCountEl.textContent = `${likeData.count} people like soccer`;
         localStorage.setItem("basicSoccer_likes", JSON.stringify(likeData));
+        
+        showNotification(likeData.liked ? "Thanks for the like! ⚽" : "Like removed.", likeData.liked ? "success" : "error");
     });
-}
+};
 
-/* =============================================
-   CONTACT FORM (localStorage)
-   ============================================= */
-
-function initContactForm() {
+/* CONTACT FORM */
+const initContactForm = () => {
     const form = document.querySelector("#contact-form");
     if (!form) return;
 
     form.addEventListener("submit", handleFormSubmit);
 
-    // Real-time validation
     const nameInput = document.querySelector("#name");
     const emailInput = document.querySelector("#email");
 
@@ -649,70 +463,57 @@ function initContactForm() {
     }
 
     if (emailInput) {
-        emailInput.addEventListener("blur", () =>
-            validateField(emailInput, "email")
-        );
+        emailInput.addEventListener("blur", () => validateField(emailInput, "email"));
         emailInput.addEventListener("input", () => clearError(emailInput));
     }
 
     loadSavedMessages();
 
-    const clearBtn = document.querySelector("#clear-messages");
-    if (clearBtn) {
-        clearBtn.addEventListener("click", clearAllMessages);
-    }
-}
+    document.querySelector("#clear-messages")?.addEventListener("click", () => {
+        if (!confirm("Are you sure you want to clear all saved messages?")) return;
+        localStorage.removeItem("basicSoccer_messages");
+        loadSavedMessages();
+        showNotification("All messages cleared.", "error");
+    });
+};
 
-/**
- * Validate a single form field
- * @param {HTMLElement} input
- * @param {string} type
- * @returns {boolean}
- */
-function validateField(input, type) {
+const validateField = (input, type) => {
     const errorEl = document.querySelector(`#${type}-error`);
     const value = input.value.trim();
 
-    // Conditional branching
-    if (type === "name") {
-        if (value.length < 2) {
-            showFieldError(input, errorEl, "Please enter your name (at least 2 characters).");
-            return false;
+    let isValid = true;
+    let message = "";
+
+    if (type === "name" && value.length < 2) {
+        isValid = false;
+        message = "Please enter your name (at least 2 characters).";
+    } else if (type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        isValid = false;
+        message = "Please enter a valid email address.";
+    }
+
+    if (!isValid) {
+        input.classList.remove("valid");
+        input.classList.add("invalid");
+        if (errorEl) {
+            errorEl.textContent = message;
+            errorEl.classList.add("show");
         }
-    } else if (type === "email") {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-            showFieldError(input, errorEl, "Please enter a valid email address.");
-            return false;
-        }
+        return false;
     }
 
     input.classList.remove("invalid");
     input.classList.add("valid");
-    if (errorEl) errorEl.classList.remove("show");
+    errorEl?.classList.remove("show");
     return true;
-}
+};
 
-function showFieldError(input, errorEl, message) {
-    input.classList.remove("valid");
-    input.classList.add("invalid");
-    if (errorEl) {
-        errorEl.textContent = message;
-        errorEl.classList.add("show");
-    }
-}
-
-function clearError(input) {
+const clearError = (input) => {
     input.classList.remove("invalid", "valid");
-    const errorEl = document.querySelector(`#${input.id}-error`);
-    if (errorEl) errorEl.classList.remove("show");
-}
+    document.querySelector(`#${input.id}-error`)?.classList.remove("show");
+};
 
-/**
- * Handle form submission
- * @param {Event} e
- */
-function handleFormSubmit(e) {
+const handleFormSubmit = (e) => {
     e.preventDefault();
 
     const nameInput = document.querySelector("#name");
@@ -720,10 +521,7 @@ function handleFormSubmit(e) {
     const topicSelect = document.querySelector("#topic");
     const messageInput = document.querySelector("#message");
 
-    const nameValid = validateField(nameInput, "name");
-    const emailValid = validateField(emailInput, "email");
-
-    if (!nameValid || !emailValid) {
+    if (!validateField(nameInput, "name") || !validateField(emailInput, "email")) {
         showNotification("Please fix the errors before submitting.", "error");
         return;
     }
@@ -736,44 +534,27 @@ function handleFormSubmit(e) {
         date: new Date().toISOString(),
     };
 
-    saveMessage(entry);
+    const messages = JSON.parse(localStorage.getItem("basicSoccer_messages")) || [];
+    messages.unshift(entry);
+    localStorage.setItem("basicSoccer_messages", JSON.stringify(messages.slice(0, 5)));
 
-    // Show success message
     const successEl = document.querySelector("#form-success");
     if (successEl) {
         successEl.innerHTML = `
-      <h3>✅ Message Sent!</h3>
-      <p>Thank you, <strong>${entry.name}</strong>! We received your message about "<em>${entry.topic}</em>" and will reply to ${entry.email} soon.</p>
-    `;
+            <h3>✅ Message Sent!</h3>
+            <p>Thank you, <strong>${entry.name}</strong>! We received your message about "<em>${entry.topic}</em>" and will reply to ${entry.email} soon.</p>
+        `;
         successEl.classList.add("show");
     }
 
     e.target.reset();
-    document.querySelectorAll("#contact-form input").forEach((i) => {
-        i.classList.remove("valid", "invalid");
-    });
+    document.querySelectorAll("#contact-form input").forEach(i => i.classList.remove("valid", "invalid"));
 
     loadSavedMessages();
     showNotification("Message saved successfully! ⚽");
-}
+};
 
-/**
- * Save a message to localStorage
- * @param {Object} entry
- */
-function saveMessage(entry) {
-    const messages = JSON.parse(localStorage.getItem("basicSoccer_messages")) || [];
-    messages.unshift(entry);
-
-    // Keep only last 5 messages
-    const trimmed = messages.slice(0, 5);
-    localStorage.setItem("basicSoccer_messages", JSON.stringify(trimmed));
-}
-
-/**
- * Load and display saved messages from localStorage
- */
-function loadSavedMessages() {
+const loadSavedMessages = () => {
     const container = document.querySelector("#saved-messages-list");
     if (!container) return;
 
@@ -784,44 +565,24 @@ function loadSavedMessages() {
         return;
     }
 
-    container.innerHTML = messages
-        .map(
-            (msg) => `
-    <div class="message-item">
-      <p class="msg-name">${msg.name}</p>
-      <p class="msg-date">${formatDate(new Date(msg.date))} · Topic: ${msg.topic}</p>
-      <p class="msg-text">${msg.message || "(No message body)"}</p>
-    </div>
-  `
-        )
-        .join("");
-}
+    container.innerHTML = messages.map(msg => `
+        <div class="message-item">
+            <p class="msg-name">${msg.name}</p>
+            <p class="msg-date">${formatDate(new Date(msg.date))} · Topic: ${msg.topic}</p>
+            <p class="msg-text">${msg.message || "(No message body)"}</p>
+        </div>
+    `).join("");
+};
 
-function clearAllMessages() {
-    if (!confirm("Are you sure you want to clear all saved messages?")) return;
-    localStorage.removeItem("basicSoccer_messages");
-    loadSavedMessages();
-    showNotification("All messages cleared.", "error");
-}
-
-/* =============================================
-   INIT
-   ============================================= */
-
+/* INIT */
 document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
     initHomePage();
     initRulesPage();
     initPositionsPage();
     initContactForm();
+    
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentyear").textContent = currentYear;
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
 });
-
-/* =============================================
-   FOOTER YEAR AND LAST MODIFIED
-   ============================================= */
-
-const currentYear = new Date().getFullYear();
-
-document.getElementById("currentyear").textContent = currentYear;
-
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
