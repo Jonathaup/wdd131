@@ -810,7 +810,6 @@ function clearAllMessages() {
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavigation();
-    setFooterYear();
     initHomePage();
     initRulesPage();
     initPositionsPage();

@@ -57,9 +57,7 @@
   padding: 1.5rem;
 }
 
-.soccer-ball-img {
-  width: 180px;
-  height: 180px;
+.soccer-ball-img {  
   filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
   animation: float 3s ease-in-out infinite;
 }
@@ -635,7 +633,7 @@
   cursor: pointer;
 }
 
-.checkbox-group input[type="checkbox"] {
+.checkbox-group input[type="checkbox"],.checkbox-group input[type="radio"] {
   width: auto;
   cursor: pointer;
 }
